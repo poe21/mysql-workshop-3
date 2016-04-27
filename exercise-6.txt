@@ -1,0 +1,11 @@
+Exercise 6
+* List all of the phone numbers for Jenkins, Charlotte
+
+mysql> SELECT Entry.id, Entry.firstName, Entry.lastName, Phone.entryId, Phone.type, Phone.subtype, Phone.content FROM Entry JOIN Phone ON Entry.id=Phone.entryId WHERE firstName="Charlotte" AND lastName="Jenkins";                        
++------+-----------+----------+---------+-------+----------+----------------+
+| id   | firstName | lastName | entryId | type  | subtype  | content        |
++------+-----------+----------+---------+-------+----------+----------------+
+| 1057 | Charlotte | Jenkins  |    1057 | other | fax      | (110) 167-3420 |
+| 1057 | Charlotte | Jenkins  |    1057 | home  | landline | (605) 175-1334 |
++------+-----------+----------+---------+-------+----------+----------------+
+2 rows in set (0.01 sec)
