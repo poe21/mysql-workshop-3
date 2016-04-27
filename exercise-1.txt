@@ -1,0 +1,37 @@
+Exercise 1
+* Reflect the data model shown in schema/addressbook_normalized.png within database decodemtl_addressbook
+    * Account.id is a primary auto-increment key
+    * AddressBook.id is a primary auto-increment key
+    * Entry.id is a primary auto-increment key
+    * Entry.type is an ENUM column permitting phone, address and electronic-mail
+    * Address.id is a primary auto-increment key
+    * Address.type is an ENUM column permitting home, work and other
+    * ElectronicMail.id is a primary auto-increment key
+    * ElectronicMail.type is an ENUM column permitting home, work and other
+    * Phone.id is a primary auto-increment key
+    * Phone.type is an ENUM column permitting home, work and other
+    * Phone.subtype is an ENUM column permitting landline, cellular and fax
+    
+mysql> CREATE DATABASE decodemtl_addressbook;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> USE decodemtl_addressbook;
+Database changed
+
+mysql> CREATE TABLE Account (id INT auto_increment primary key, email VARCHAR(255), password VARCHAR(40), createdOn DATETIME, modifiedOn DATETIME);
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> CREATE TABLE AddressBook (id INT auto_increment primary key, accountId INT, FOREIGN KEY (accountId) REFERENCES Account(id), name VARCHAR(255), createdOn DATETIME, modifiedOn DATETIME);                                             
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> CREATE TABLE Entry (id INT auto_increment primary key, addressBookId INT, FOREIGN KEY (addressBookId) REFERENCES AddressBook(id), firstName VARCHAR(255), lastName VARCHAR(255), birthday DATETIME, type ENUM ("phone","address","electronic-mail"));
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> CREATE TABLE Phone (id INT auto_increment primary key, entryId INT, FOREIGN KEY (entryId) REFERENCES Entry(id), type ENUM ("home","work","other"), subtype ENUM ("landline","cellular","fax"), content VARCHAR(255));
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> CREATE TABLE Address (id INT auto_increment primary key, entryId INT, FOREIGN KEY (entryId) REFERENCES Entry(id), type ENUM ("home","work","other"), addressLine1 VARCHAR(255), addressLine2 VARCHAR(255), city VARCHAR(255), province VARCHAR(128), country VARCHAR(128), postalCode VARCHAR(10));
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> CREATE TABLE ElectronicMail (id INT auto_increment primary key, entryId INT, FOREIGN KEY (entryId) REFERENCES Entry(id), type ENUM ("home","work","other"), content VARCHAR(255));
+Query OK, 0 rows affected (0.04 sec)
