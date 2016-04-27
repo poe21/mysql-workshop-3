@@ -1,0 +1,23 @@
+Exercise 5
+* List all of the emails associated to AddressBook.id = 100
+
+mysql> SELECT Entry.id, Entry.addressBookId, ElectronicMail.entryId, ElectronicMail.content FROM Entry JOIN ElectronicMail ON Entry.id=ElectronicMail.entryId WHERE addressBookId=100;                                                      
++------+---------------+---------+--------------------------------------------+
+| id   | addressBookId | entryId | content                                    |
++------+---------------+---------+--------------------------------------------+
+| 4019 |           100 |    4019 | Nam.tempor@nisimagna.co.uk                 |
+| 4030 |           100 |    4030 | vitae.diam@sapienAeneanmassa.com           |
+| 4030 |           100 |    4030 | cursus.vestibulum@pellentesqueSeddictum.ca |
+| 4060 |           100 |    4060 | velit@vestibulum.co.uk                     |
+| 4060 |           100 |    4060 | tincidunt.congue.turpis@Inmi.net           |
+| 4392 |           100 |    4392 | nibh.Donec.est@nibh.org                    |
+| 4486 |           100 |    4486 | malesuada.fames.ac@Sedeu.co.uk             |
+| 4897 |           100 |    4897 | tortor.dictum@Nulla.org                    |
+| 4897 |           100 |    4897 | mauris.blandit.mattis@Integersemelit.net   |
+| 5243 |           100 |    5243 | Nunc.ac@parturientmontesnascetur.com       |
+| 5243 |           100 |    5243 | vulputate.posuere.vulputate@liberoDonec.ca |
+| 5466 |           100 |    5466 | massa.Quisque.porttitor@enimSednulla.edu   |
+| 5593 |           100 |    5593 | eget@viverraMaecenasiaculis.net            |
+| 5775 |           100 |    5775 | eu.tellus@ipsum.co.uk                      |
++------+---------------+---------+--------------------------------------------+
+14 rows in set (0.00 sec)
