@@ -10,73 +10,74 @@ mysql> SELECT * FROM AddressBook WHERE name="Pharetra Ut Limited";
 +----+-----------+---------------------+---------------------+---------------------+
 1 row in set (0.00 sec)
 
-mysql> SELECT CONCAT(UPPER(LEFT(firstName, 1)), SUBSTRING(firstName, 2, (LENGTH(firstName)-2)), UPPER (RIGHT(firstName, 1))) AS firstName FROM Entry WHERE addressBookId=88;
-+-----------+
-| firstName |
-+-----------+
-| JustinE   |
-| TaneK     |
-| KayE      |
-| KirK      |
-| ZacherY   |
-| KaY       |
-| RoarY     |
-| IolA      |
-| KimberleY |
-| JerrY     |
-| PaulA     |
-| HayeS     |
-| CharlottE |
-| KevyN     |
-| DaceY     |
-| IvorY     |
-| KirbY     |
-| PalomA    |
-| ColettE   |
-| ShaD      |
-| EzekieL   |
-| EagaN     |
-| JoaN      |
-| RandalL   |
-| ChristeN  |
-| BiancA    |
-| TyleR     |
-| ForresT   |
-| AnN       |
-| PatriciA  |
-| GracE     |
-| BoriS     |
-| JaquelyN  |
-| KaI       |
-| TaShyA    |
-| XenA      |
-| NaidA     |
-| RhodA     |
-| CiaraN    |
-| JareD     |
-| RaphaeL   |
-| MarshalL  |
-| JadeN     |
-| OrlA      |
-| BlainE    |
-| ChristiaN |
-| ShoshanA  |
-| KeitH     |
-| SawyeR    |
-| MartiN    |
-| AngelicA  |
-| SigourneY |
-| TatianA   |
-| MercedeS  |
-| EugeniA   |
-| XandrA    |
-| BrendaN   |
-| ZeuS      |
-| BrandoN   |
-| BrookE    |
-| CelestE   |
-| AlicE     |
-| SamueL    |
-| IrenE     |
-+-----------+
-64 rows in set (0.00 sec)
+mysql> SELECT CONCAT(UPPER(LEFT(firstName, 1)), SUBSTRING(firstName, 2, (LENGTH(firstName)-2)), UPPER (RIGHT(firstName, 1))) AS firstName FROM Entry WHERE addressBookId=10;
++-------------+
+| firstName   |
++-------------+
+| ZeleniA     |
+| AbduL       |
+| IdolA       |
+| IllanA      |
+| WinifreD    |
+| BuckminsteR |
+| HeidI       |
+| NelL        |
+| CiarA       |
+| SylviA      |
+| CaryN       |
+| DieteR      |
+| JamaliA     |
+| HerroD      |
+| UnitY       |
+| PascalE     |
+| ColtoN      |
+| JamaL       |
+| AbeL        |
+| ZenA        |
+| PrescotT    |
+| IdonA       |
+| PalomA      |
+| NevE        |
+| KylA        |
+| KimberleY   |
+| JilliaN     |
+| AddisoN     |
+| JacquelinE  |
+| SashA       |
+| LeE         |
+| SalvadoR    |
+| YokO        |
+| StacY       |
+| HaleE       |
+| BlythE      |
+| TaD         |
+| HaleY       |
+| LarA        |
+| SummeR      |
+| LatifaH     |
+| FaitH       |
+| StaceY      |
+| JennifeR    |
+| FultoN      |
+| ColiN       |
+| ThanE       |
+| CaryN       |
+| BO          |
+| JamaL       |
+| AmenA       |
+| MelaniE     |
+| DriscolL    |
+| GaretH      |
+| ColT        |
+| MarthA      |
+| SierrA      |
+| NitA        |
+| CelestE     |
+| KathleeN    |
+| SamueL      |
+| AaroN       |
+| CheyennE    |
+| BretT       |
+| RebekaH     |
++-------------+
+65 rows in set (0.00 sec)
