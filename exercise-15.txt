@@ -1,0 +1,81 @@
+Exercise 15
+* Transform all work emails into home emails and vice versa
+
+UPDATE ElectronicMail
+SET type= 
+CASE 
+    WHEN type="home" THEN "work"
+    WHEN type="work" THEN "home"
+END
+WHERE type="home" OR type="work";
+
+...
+
+| 2235 |    4835 | work  | arcu@laoreetlectusquis.org                             |
+| 2236 |    4197 | work  | vel@necleoMorbi.net                                    |
+| 2237 |    4185 | work  | sit.amet@sitamet.org                                   |
+| 2238 |    4958 | work  | a.auctor@porttitorvulputateposuere.net                 |
+| 2239 |    4719 | work  | Nulla.dignissim.Maecenas@nequeInornare.net             |
+| 2240 |    5589 | work  | vehicula.risus.Nulla@ultricies.com                     |
+| 2241 |    5629 | home  | Suspendisse.eleifend.Cras@sitamet.ca                   |
+| 2242 |    4402 | home  | nibh@elita.com                                         |
+| 2243 |    4316 | home  | bibendum@atlacus.ca                                    |
+| 2244 |    5368 | home  | ac@malesuadaaugueut.org                                |
+| 2245 |    4170 | home  | dictum@dapibusrutrumjusto.edu                          |
+| 2246 |    4726 | home  | eget.metus.In@et.edu                                   |
+| 2247 |    4266 | home  | amet@ultricesiaculis.edu                               |
+| 2248 |    4119 | home  | massa.rutrum.magna@Donec.edu                           |
+| 2249 |    5172 | home  | Duis.sit.amet@orci.net                                 |
+| 2250 |    5479 | home  | eu.arcu@Etiamgravidamolestie.com                       |
+| 2251 |    5941 | other | fermentum.metus.Aenean@aliquameu.edu                   |
+| 2252 |    5943 | other | nec.tempus@ipsumSuspendissesagittis.org                |
+| 2253 |    4310 | other | convallis@felis.ca                                     |
+| 2254 |    4636 | other | mollis.non@nulla.org                                   |
+| 2255 |    4298 | other | aliquam.eros@Phasellusliberomauris.net                 |
+| 2256 |    4565 | other | Quisque@sitametconsectetuer.edu                        |
+| 2257 |    5572 | other | pharetra@necmauris.edu                                 |
+| 2258 |    5986 | other | neque.vitae@ultricesiaculis.ca                         |
+| 2259 |    5323 | other | erat.vitae.risus@Etiam.co.uk                           |
+| 2260 |    4831 | other | blandit@tellusAeneanegestas.co.uk                      |
+| 2261 |    4974 | work  | a.dui@elementumategestas.ca                            |
+| 2262 |    5540 | work  | luctus.sit.amet@molestieSedid.net                      |
+| 2263 |    5878 | work  | a.auctor@libero.org                                    |
+| 2264 |    4068 | work  | elit.Curabitur@pulvinararcuet.net                      |
+| 2265 |    4671 | work  | vel.turpis.Aliquam@dolorQuisque.net                    |
+| 2266 |    5861 | work  | metus@utsemNulla.org                                   |
+| 2267 |    4907 | work  | Pellentesque.ultricies.dignissim@elementumlorem.net    |
+| 2268 |    5111 | work  | Cras.vulputate@mollis.com                              |
+| 2269 |    5177 | work  | commodo.auctor@Phasellusornare.net                     |
+| 2270 |    4408 | work  | lacinia@aodiosemper.com                                |
+| 2271 |    5130 | home  | aliquet.sem@lectusrutrum.edu                           |
+| 2272 |    4332 | home  | Aenean.massa@velit.net                                 |
+| 2273 |    5825 | home  | fringilla@acturpisegestas.net                          |
+| 2274 |    4889 | home  | erat@Craspellentesque.com                              |
+| 2275 |    4294 | home  | pede.Cum.sociis@inlobortis.com                         |
+| 2276 |    5060 | home  | urna.Ut.tincidunt@CurabiturmassaVestibulum.edu         |
+| 2277 |    5552 | home  | et@quisdiam.ca                                         |
+| 2278 |    5727 | home  | quam.vel.sapien@nonloremvitae.net                      |
+| 2279 |    5279 | home  | felis.eget@dolorquamelementum.edu                      |
+| 2280 |    4323 | home  | Fusce@quisaccumsanconvallis.edu                        |
+| 2281 |    4219 | other | sit@tellus.com                                         |
+| 2282 |    5960 | other | id.enim@egestas.edu                                    |
+| 2283 |    4766 | other | Donec.egestas.Aliquam@quisturpis.edu                   |
+| 2284 |    5407 | other | ultrices.a.auctor@enimMaurisquis.com                   |
+| 2285 |    5886 | other | eu@ategestasa.net                                      |
+| 2286 |    5436 | other | Nunc.pulvinar.arcu@mollis.org                          |
+| 2287 |    4546 | other | a.malesuada@habitant.com                               |
+| 2288 |    5952 | other | magna.Ut@Curabitur.net                                 |
+| 2289 |    4116 | other | eleifend.Cras@Nuncacsem.net                            |
+| 2290 |    5131 | other | pellentesque@natoque.ca                                |
+| 2291 |    5930 | work  | metus.In.lorem@elementumpurus.ca                       |
+| 2292 |    4455 | work  | tempor.diam.dictum@Praesentinterdumligula.org          |
+| 2293 |    5702 | work  | Proin.mi.Aliquam@adipiscingligula.org                  |
+| 2294 |    5277 | work  | pellentesque.tellus@Praesent.ca                        |
+| 2295 |    4171 | work  | bibendum.Donec.felis@etcommodo.com                     |
+| 2296 |    5662 | work  | dolor.sit.amet@sedduiFusce.edu                         |
+| 2297 |    5594 | work  | Mauris.quis.turpis@nisl.org                            |
+| 2298 |    5899 | work  | vestibulum.Mauris.magna@tellusimperdietnon.net         |
+| 2299 |    5999 | work  | egestas@sapienimperdiet.com                            |
+| 2300 |    5878 | work  | Phasellus.in@bibendum.co.uk                            |
++------+---------+-------+--------------------------------------------------------+
+2300 rows in set (0.00 sec)
