@@ -1,0 +1,82 @@
+Exercise 4
+* List all of the first names for AddressBook.name="Pharetra Ut Limited"
+* The first and last letters should be capitalized
+
+mysql> SELECT * FROM AddressBook WHERE name="Pharetra Ut Limited";
++----+-----------+---------------------+---------------------+---------------------+
+| id | accountId | name                | createdOn           | modifiedOn          |
++----+-----------+---------------------+---------------------+---------------------+
+| 10 |        88 | Pharetra Ut Limited | 2016-05-23 06:09:38 | 2016-05-10 09:47:12 |
++----+-----------+---------------------+---------------------+---------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT CONCAT(UPPER(LEFT(firstName, 1)), SUBSTRING(firstName, 2, (LENGTH(firstName)-2)), UPPER (RIGHT(firstName, 1))) AS firstName FROM Entry WHERE addressBookId=88;
++-----------+
+| firstName |
++-----------+
+| JustinE   |
+| TaneK     |
+| KayE      |
+| KirK      |
+| ZacherY   |
+| KaY       |
+| RoarY     |
+| IolA      |
+| KimberleY |
+| JerrY     |
+| PaulA     |
+| HayeS     |
+| CharlottE |
+| KevyN     |
+| DaceY     |
+| IvorY     |
+| KirbY     |
+| PalomA    |
+| ColettE   |
+| ShaD      |
+| EzekieL   |
+| EagaN     |
+| JoaN      |
+| RandalL   |
+| ChristeN  |
+| BiancA    |
+| TyleR     |
+| ForresT   |
+| AnN       |
+| PatriciA  |
+| GracE     |
+| BoriS     |
+| JaquelyN  |
+| KaI       |
+| TaShyA    |
+| XenA      |
+| NaidA     |
+| RhodA     |
+| CiaraN    |
+| JareD     |
+| RaphaeL   |
+| MarshalL  |
+| JadeN     |
+| OrlA      |
+| BlainE    |
+| ChristiaN |
+| ShoshanA  |
+| KeitH     |
+| SawyeR    |
+| MartiN    |
+| AngelicA  |
+| SigourneY |
+| TatianA   |
+| MercedeS  |
+| EugeniA   |
+| XandrA    |
+| BrendaN   |
+| ZeuS      |
+| BrandoN   |
+| BrookE    |
+| CelestE   |
+| AlicE     |
+| SamueL    |
+| IrenE     |
++-----------+
+64 rows in set (0.00 sec)
