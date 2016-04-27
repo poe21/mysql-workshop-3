@@ -1,0 +1,31 @@
+Exercise 2
+* Bulk import data from the source files into decodemtl_addressbook:
+    * data/import-account.sql
+    * data/import-addressbook.sql
+    * data/import-entry.sql
+    
+mysql> source data/import-account.sql
+mysql> source data/import-addressbook.sql
+mysql> source data/import-entry.sql 
+    
+Query OK, 10 rows affected (0.00 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+Query OK, 10 rows affected (0.00 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+Query OK, 10 rows affected (0.00 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+Query OK, 10 rows affected (0.01 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+Query OK, 10 rows affected (0.00 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+Query OK, 10 rows affected (0.01 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+Query OK, 10 rows affected (0.00 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+etc...
